@@ -1,0 +1,15 @@
+﻿如果想以 utf-8 编码，而不是 GBK 编码的话，请编辑 matlab 的 locale 数据库文件 lcdata.xml (matlab bin 目录下).  删除  <encoding name=”GBK”>  
+  < encoding_alias name=”936”>  
+</encoding>
+并将  <encoding name=”UTF-8”>  
+  <encoding_alias name=”utf8”/> 
+</encoding>  
+改为<encoding name=”UTF-8”>  
+  <encoding_alias name=”utf8”/>  
+  <encoding_alias name=”GBK”/>  
+</encoding>  
+重启 matlab 之后，即以 utf-8 编码.
+
+
+作者：mozooo
+链接：https://www.zhihu.com/question/27933621/answer/249429313

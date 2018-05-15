@@ -2,8 +2,13 @@ function [ T_ ] = KNN( T )% The size of T is n*2
 t=7;
 T_=zeros(t,3);%T_?T
 for i=1:t
+<<<<<<< HEAD
     %随机选择t个数
     %r_index=floor(rand(1)*length(T)+1);
+=======
+    %随机选择1个数
+%     r_index=floor(rand(1)*length(T)+1);
+>>>>>>> mainFunction
     %就取前几个数
     r_index=t;
     T_(i,:)=T(r_index,:);
@@ -13,6 +18,10 @@ end
 while true
     i=1;    flag=false;
     while i<=size(T,1)
+<<<<<<< HEAD
+=======
+%         m=0;min=inf;
+>>>>>>> mainFunction
         %找到T_中的距离T(i)的最小的那个点，或者多个点，之后再判断是不是同一类
         %m是返回的T_中的距离最小的下标值
         d=zeros(1,size(T_,1));
@@ -20,6 +29,13 @@ while true
             x=T(i,:);
             y=T_(j,:);
             d(j)=sqrt((x(1)-y(1))^2+(x(2)-y(2))^2);
+<<<<<<< HEAD
+=======
+%             if d<min
+%                 min=d;
+%                 m=j;
+%             end
+>>>>>>> mainFunction
         end
         %tt 是距离排序之后前
         [~,tt]=sort(d);
